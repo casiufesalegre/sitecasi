@@ -60,7 +60,7 @@ h2 {
     transform: translateY(-2px);
     color: #fff;
 }
-btn-principal {
+.btn-principal {
     background-color: #4D5BCE; 
     color: #ffffff; 
     padding: 10px 15px;
@@ -94,6 +94,10 @@ btn-principal {
     background-color: #374291;
 }
 
+.container { max-width: 960px; margin: 0 auto; padding: 20px; }
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; }
+.card { border: 1px solid #ddd; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+h2, h3 { color: #333; }
 section {
     padding: 3rem 0;
 }
