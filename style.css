@@ -60,17 +60,39 @@ h2 {
     transform: translateY(-2px);
     color: #fff;
 }
-.btn-secondary {
-    display: inline-block;
-    background: #e9ecef;
-    color: var(--text-color);
-    padding: 10px 20px;
+btn-principal {
+    background-color: #4D5BCE; 
+    color: #ffffff; 
+    padding: 10px 15px;
+    border-radius: 5px;
     text-decoration: none;
-    border-radius: 50px;
-    font-weight: 600;
-    transition: background-color 0.3s;
+    display: inline-block;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
-.btn-secondary:hover { background: #dee2e6; }
+
+.btn-principal:hover {
+    background-color: #374291; 
+}
+
+.btn-secondary {
+    background-color: #4D5BCE; 
+    color: #ffffff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+ .btn-secondary:hover {
+    background-color: #374291;
+}
 
 section {
     padding: 3rem 0;
