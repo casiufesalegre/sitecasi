@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', function() {
         { date: "22/09", event: "Início do semestre letivo" },
         { date: "22/09 a 10/10", event: "Período para solicitação de trancamento automático de curso (TMA)" },
         { date: "23/09 a 25/09", event: "Período de cancelamento de disciplina no Portal do Aluno" },
-        { date: "14/10 a 20/10", event: "Período de ajuste de matrícula no Portal do Aluno" },
+        { date: "14/10 a 20/10", event: "Período de ajuste de matrícula no Portal do Aluno - 2º escopo" },
         { date: "29/10 a 03/11", event: "Solicitação de aplicação do art. 17 (exercícios domiciliares)" }
     ];
 
