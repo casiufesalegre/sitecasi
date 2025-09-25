@@ -16,7 +16,8 @@
             <ul class="nav-links">
                 <li><a href="#home">Início</a></li>
                 <li><a href="#sobre">Sobre</a></li>
-                <li><a href="#grade-curricular">Grade Curricular</a></li>
+                <li><a href="#grade-curricular">Grade</a></li>
+                <li><a href="#horarios">Horários</a></li>
                 <li><a href="#eventos">Eventos</a></li>
                 <li><a href="#calendario">Calendário</a></li>
                 <li><a href="#contato">Contato</a></li>
@@ -46,8 +47,11 @@
                         <h3>Nossa Missão</h3>
                         <p>Representar os estudantes de Sistemas de Informação, promovendo integração, desenvolvimento acadêmico e oportunidades que preparem para os desafios do mercado de tecnologia.</p>
                     </div>
-                    <div class="about-members">
-                        <h3>Gestão Atual</h3>
+                </div>
+
+                <div class="about-members">
+                    <h3>Gestão Atual</h3>
+                    <div class="members-row">
                         <div class="member-card">
                             <img src="https://i.pravatar.cc/150?img=5" alt="Foto do Presidente">
                             <h4>Marlon Domingos Cury</h4>
@@ -124,7 +128,191 @@
                     </div>
                 </div>
             </div>
-        </section> <section id="eventos">
+        </section>
+        
+        <section id="horarios">
+            <div class="container">
+                <h2>Horários do Semestre 2025/2</h2>
+                <p class="section-subtitle">Selecione o período para visualizar os horários das aulas.</p>
+                
+                <div class="tabs">
+                    <button class="tab-button active" data-target="periodo1">1º Período</button>
+                    <button class="tab-button" data-target="periodo3">3º Período</button>
+                    <button class="tab-button" data-target="periodo5">5º Período</button>
+                    <button class="tab-button" data-target="periodo7">7º Período</button>
+                    <button class="tab-button" data-target="periodo9">9º Período</button>
+                </div>
+
+                <div class="tab-content">
+                    <div id="periodo1" class="content active">
+                        <div class="schedule-wrapper">
+                            <table class="schedule-table">
+                                <thead>
+                                    <tr><th>Horas</th><th>Segunda-feira</th><th>Terça-feira</th><th>Quarta-feira</th><th>Quinta-feira</th><th>Sexta-feira</th></tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>18:00 às 20:00</td>
+                                        <td><strong>Introdução à Informática</strong><small>Sala 03 - Prédio Básico</small></td>
+                                        <td><strong>Vetores e Geometria Analítica</strong><small>Sala 03 - Prédio Básico</small></td>
+                                        <td><strong>Lógica Computacional I</strong><small>Sala 03 - Prédio Básico</small></td>
+                                        <td><strong>Programação I</strong><small>Lab 1 - CNCfis</small></td>
+                                        <td><strong>Introdução aos Sistemas de Informação</strong><small>A definir</small></td>
+                                    </tr>
+                                    <tr>
+                                        <td>20:00 às 22:00</td>
+                                        <td><strong>Lógica Computacional I</strong><small>Sala 03 - Prédio Básico</small></td>
+                                        <td><strong>Português Instrumental</strong><small>Lab 1 - CNCfis</small></td>
+                                        <td><strong>Introdução à Informática</strong><small>Sala 03 - Prédio Básico</small></td>
+                                        <td><strong>Vetores e Geometria Analítica</strong><small>Sala 03 - Prédio Básico</small></td>
+                                        <td><strong>Programação I</strong><small>Lab 1 - CNCfis</small></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div id="periodo3" class="content">
+                        <div class="schedule-wrapper">
+                             <table class="schedule-table">
+                                <thead>
+                                    <tr><th>Horas</th><th>Segunda-feira</th><th>Terça-feira</th><th>Quarta-feira</th><th>Quinta-feira</th><th>Sexta-feira</th></tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>17:00 às 19:00</td>
+                                        <td><strong>Sistemas de Apoio à Decisão</strong><small>Sala 07 - Prédio Central</small></td>
+                                        <td></td><td></td><td></td><td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>19:00 às 21:00</td>
+                                        <td><strong>Estruturas de Dados I</strong><small>Lab 1 - CNCfis</small></td>
+                                        <td><strong>Estruturas de Dados I</strong><small>Lab 1 - CNCfis</small></td>
+                                        <td><strong>Engenharia de Software I</strong><small>A definir</small></td>
+                                        <td><strong>Computabilidade e Complexidade</strong><small>Sala 07 - Prédio Central</small></td>
+                                        <td><strong>Computabilidade e Complexidade</strong><small>Sala 07 - Prédio Central</small></td>
+                                    </tr>
+                                    <tr>
+                                        <td>21:00 às 23:00</td>
+                                        <td><strong>Estruturas de Dados I</strong><small>Lab 1 - CNCfis</small></td>
+                                        <td><strong>Álgebra Linear</strong><small>Sala 07 - Prédio Central</small></td>
+                                        <td><strong>Sistemas de Apoio à Decisão</strong><small>Sala 07 - Prédio Central</small></td>
+                                        <td><strong>Álgebra Linear</strong><small>Sala 07 - Prédio Central</small></td>
+                                        <td><strong>Engenharia de Software I</strong><small>A definir</small></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div id="periodo5" class="content">
+                         <div class="schedule-wrapper">
+                             <table class="schedule-table">
+                                <thead>
+                                    <tr><th>Horas</th><th>Segunda-feira</th><th>Terça-feira</th><th>Quarta-feira</th><th>Quinta-feira</th><th>Sexta-feira</th></tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>17:00 às 19:00</td>
+                                        <td></td>
+                                        <td><strong>Otimização Linear</strong><small>Lab 1 - CNCfis</small></td>
+                                        <td></td><td></td>
+                                        <td><strong>Interação Humano-Máquina</strong><small>A definir</small></td>
+                                    </tr>
+                                    <tr>
+                                        <td>19:00 às 21:00</td>
+                                        <td><strong>Sistemas Operacionais</strong><small>Lab 1 - CNCfis</small></td>
+                                        <td><strong>Otimização Linear</strong><small>Lab 1 - CNCfis</small></td>
+                                        <td><strong>Banco de Dados</strong><small>Lab 3 - CNCfis</small></td>
+                                        <td><strong>Projeto de Sistemas de Informação I</strong><small>Lab 3 - CNCfis</small></td>
+                                        <td><strong>Interação Humano-Máquina</strong><small>A definir</small></td>
+                                    </tr>
+                                    <tr>
+                                        <td>21:00 às 23:00</td>
+                                        <td><strong>Sistemas Operacionais</strong><small>Lab 1 - CNCfis</small></td>
+                                        <td><strong>Sistemas Operacionais</strong><small>Lab 1 - CNCfis</small></td>
+                                        <td><strong>Banco de Dados</strong><small>Lab 3 - CNCfis</small></td>
+                                        <td><strong>Projeto de Sistemas de Informação I</strong><small>Lab 3 - CNCfis</small></td>
+                                        <td><strong>Projeto de Sistemas de Informação I</strong><small>Lab 3 - CNCfis</small></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div id="periodo7" class="content">
+                        <div class="schedule-wrapper">
+                             <table class="schedule-table">
+                                <thead>
+                                    <tr><th>Horas</th><th>Segunda-feira</th><th>Terça-feira</th><th>Quarta-feira</th><th>Quinta-feira</th><th>Sexta-feira</th></tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>17:00 às 19:00</td>
+                                        <td><strong>Sistemas Distribuídos</strong><small>Lab. Desenv. SW I - Reuni</small></td>
+                                        <td><strong>Sistemas Distribuídos</strong><small>Lab. Desenv. SW I - Reuni</small></td>
+                                        <td></td>
+                                        <td><strong>Administração e Economia</strong><small>A definir</small></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>19:00 às 21:00</td>
+                                        <td><strong>Sistemas Distribuídos</strong><small>Lab. Desenv. SW I - Reuni</small></td>
+                                        <td><strong>OPTATIVA IV - Tópicos Especiais em Otimização Combinatória II</strong><small>A definir</small></td>
+                                        <td><strong>Segurança e Auditoria de Sistemas</strong><small>Lab. Desenv. SW I - Reuni</small></td>
+                                        <td><strong>Administração e Economia</strong><small>A definir</small></td>
+                                        <td><strong>Comércio Eletrônico</strong><small>Lab. Desenv. SW I - Reuni</small></td>
+                                    </tr>
+                                    <tr>
+                                        <td>21:00 às 23:00</td>
+                                        <td><strong>Informática e Sociedade</strong><small>A definir</small></td>
+                                        <td><strong>OPTATIVA IV - Tópicos Especiais em Otimização Combinatória II</strong><small>A definir</small></td>
+                                        <td><strong>Segurança e Auditoria de Sistemas</strong><small>Lab. Desenv. SW I - Reuni</small></td>
+                                        <td><strong>Comércio Eletrônico</strong><small>Lab. Desenv. SW I - Reuni</small></td>
+                                        <td><strong>Segurança e Auditoria de Sistemas</strong><small>Lab. Desenv. SW I - Reuni</small></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div id="periodo9" class="content">
+                        <div class="schedule-wrapper">
+                             <table class="schedule-table">
+                                <thead>
+                                    <tr><th>Horas</th><th>Segunda-feira</th><th>Terça-feira</th><th>Quarta-feira</th><th>Quinta-feira</th><th>Sexta-feira</th></tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>16:00 às 18:00</td>
+                                        <td><strong>Algoritmos Numéricos</strong><small>Sala 04 - Prédio Central</small></td>
+                                        <td></td>
+                                        <td><strong>Algoritmos Numéricos</strong><small>Sala 04 - Prédio Central</small></td>
+                                        <td></td><td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>18:00 às 20:00</td>
+                                        <td></td>
+                                        <td><strong>OPTATIVA IV - Tópicos Especiais em Banco de Dados II</strong><small>A definir</small></td>
+                                        <td><strong>OPTATIVA IV - Tópicos Especiais em Redes de Computadores II</strong><small>Lab. Desenv. SW 2 - Reuni</small></td>
+                                        <td></td><td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>20:00 às 22:00</td>
+                                        <td></td>
+                                        <td><strong>OPTATIVA IV - Tópicos Especiais em Sistemas Operacionais</strong><small>A definir</small></td>
+                                        <td><strong>OPTATIVA IV - Tópicos Especiais em Computação Gráfica</strong><small>A definir</small></td>
+                                        <td></td><td></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="eventos">
              <div class="container">
                 <h2>Próximos Minicursos</h2>
                 <div class="grid">
@@ -160,7 +348,9 @@
                     </div>
                 </div>
             </div>
-        </section> <section id="calendario">
+        </section>
+
+        <section id="calendario">
             <div class="container">
                 <h2>Calendário Acadêmico</h2>
                 <p class="section-subtitle">Datas importantes do semestre. Consulte sempre a fonte oficial para informações atualizadas.</p>
@@ -190,7 +380,9 @@
                      <a href="#" class="btn">Acessar Calendário Oficial da UFES</a>
                 </div>
             </div>
-        </section> <section id="vagas">
+        </section>
+
+        <section id="vagas">
             <div class="container">
                 <h2>Vagas e Oportunidades</h2>
                 <p class="section-subtitle">Busque por estágios e empregos diretamente pelo nosso chatbot no WhatsApp!</p>
@@ -227,7 +419,7 @@
     </main>
 
     <a href="https://wa.me/5528999999999?text=Ol%C3%A1%21%20Gostaria%20de%20ver%20as%20vagas%20dispon%C3%ADveis." class="whatsapp-fab" target="_blank">
-        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-whatsapp" viewBox="0 0 16 16"><path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.6.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-whatsapp" viewBox="0 0 16 16"><path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/></svg>
         <span>Vagas via WhatsApp</span>
     </a>
 
