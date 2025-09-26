@@ -288,7 +288,126 @@ nav .logo {
 .schedule-table td small { font-size: 0.7rem; color: #555; }
 .schedule-table thead { background-color: var(--primary-color); color: white; }
 .schedule-table tbody tr:nth-of-type(even) { background-color: #f0f0f0; }
+/*-- Sessao colegiado e secretaria*/
+.contact-grid { 
+    display: flex; 
+    flex-direction: column; /* Em mobile, os cards ficam um abaixo do outro */
+    gap: 2rem; 
+    margin-top: 2rem; 
+}
 
+.contact-card { 
+    background: #fff; 
+    padding: 1.5rem; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05); 
+}
+
+.contact-card h3 { 
+    margin-top: 0; 
+    margin-bottom: 1rem; 
+    color: var(--primary-color); 
+    font-size: 1.3rem; 
+}
+
+.contact-card p { 
+    margin-bottom: 0.5rem; 
+}
+
+/* Para telas maiores, a direção muda para linha */
+@media(min-width: 768px) {
+    .contact-grid { 
+        flex-direction: row; 
+    }
+}
+
+/* corpo docente e noticias*/
+.grid { 
+    display: grid; 
+    grid-template-columns: 1fr; /* Em mobile, os cards ficam em uma coluna */
+    gap: 1.5rem; 
+}
+
+.card { 
+    background: #fff; 
+    padding: 0; 
+    border: 1px solid #ddd; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08); 
+    display: flex; 
+    flex-direction: column; 
+    overflow: hidden; 
+}
+
+.card-img { 
+    width: 100%; 
+    height: 200px; 
+    object-fit: cover; 
+}
+
+.card-body { 
+    padding: 1.5rem; 
+    display: flex; 
+    flex-direction: column; 
+    flex-grow: 1; 
+}
+
+.card-date { 
+    color: #6c757d; 
+    font-size: 0.8rem; 
+    margin-bottom: 0.5rem; 
+}
+
+.card h3 { 
+    margin-bottom: 1rem; 
+    font-size: 1.2rem; 
+}
+
+.card p { 
+    margin-bottom: 1rem; 
+    flex-grow: 1; 
+    font-size: 0.9rem; 
+}
+
+.card-link { 
+    font-weight: 600; 
+    color: var(--primary-color); 
+    text-decoration: none; 
+}
+
+.teacher-links a { 
+    margin-right: 10px; 
+    text-decoration: none; 
+}
+
+/* Para telas maiores, o grid se ajusta para múltiplas colunas */
+
+
+/* Atividades complementares*/
+.table-wrapper { 
+    overflow-x: auto; /* Permite rolagem horizontal em telas pequenas */
+}
+
+.custom-table { 
+    width: 100%; 
+    border-collapse: collapse; 
+    text-align: left; 
+}
+
+.custom-table th, .custom-table td { 
+    padding: 12px; 
+    border: 1px solid #ddd; 
+    font-size: 0.9rem; 
+}
+
+.custom-table thead { 
+    background-color: var(--primary-color); 
+    color: white; 
+}
+
+.custom-table tbody tr:nth-of-type(even) { 
+    background-color: #f0f0f0; 
+}
 /* --- Grid para Cards (Eventos) --- */
 .grid { display: grid; grid-template-columns: 1fr; gap: 2rem; }
 .card {
@@ -416,6 +535,12 @@ form input:focus, form textarea:focus { outline: none; border-color: var(--prima
     .contact-wrapper { flex-direction: row; text-align: left; align-items: flex-start; }
     .contact-form { flex: 2; }
     .contact-info { flex: 1; padding-top: 10px; }
+
+    /* corpo docente e noticias*/
+    .grid { 
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); 
+    }
+
 }
 
 @media(min-width: 1024px) {
