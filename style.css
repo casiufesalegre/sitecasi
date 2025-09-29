@@ -8,75 +8,24 @@
     --body-font: 'Poppins', sans-serif;
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
 body {
     font-family: var(--body-font);
     color: var(--text-color);
     line-height: 1.6;
-    padding-top: 70px; /* Compensa a altura do header fixo */
+    padding-top: 70px;
 }
-
-.container {
-    width: 90%;
-    margin: 0 auto;
-}
-
-h2 {
-    text-align: center;
-    font-size: 2rem;
-    font-weight: 700;
-    margin-bottom: 2rem;
-}
-
-.section-subtitle {
-    text-align: center;
-    max-width: 600px;
-    margin: -1rem auto 2.5rem auto;
-    color: #6c757d;
-}
-
+.container { width: 90%; margin: 0 auto; }
+h2 { text-align: center; font-size: 2rem; font-weight: 700; margin-bottom: 2rem; }
+h3 { font-size: 1.5rem; margin-bottom: 1rem; color: var(--primary-color); }
+.section-subtitle { text-align: center; max-width: 600px; margin: -1rem auto 2.5rem auto; color: #6c757d; }
 .btn {
-    display: inline-block;
-    background: var(--primary-color);
-    color: #fff;
-    padding: 12px 28px;
-    text-decoration: none;
-    border-radius: 50px;
-    font-weight: 600;
-    border: none;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    display: inline-block; background: var(--primary-color); color: #fff;
+    padding: 12px 28px; text-decoration: none; border-radius: 50px;
+    font-weight: 600; border: none; transition: background-color 0.3s ease, transform 0.2s ease;
 }
-.btn:hover {
-    background: var(--primary-hover);
-    transform: translateY(-2px);
-    color: #fff;
-}
-.btn-principal {
-    background-color: #4D5BCE; 
-    color: #ffffff; 
-    padding: 10px 15px;
-    border-radius: 5px;
-    text-decoration: none;
-    display: inline-block;
-    text-align: center;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.btn-principal:hover {
-    background-color: #374291; 
-}
-
+.btn:hover { background: var(--primary-hover); transform: translateY(-2px); color: #fff; }
 .btn-secondary {
     background-color: #4D5BCE; 
     color: #ffffff;
@@ -89,144 +38,67 @@ h2 {
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
-
- .btn-secondary:hover {
-    background-color: #374291;
-}
-
-.container { max-width: 960px; margin: 0 auto; padding: 20px; }
-.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; }
-.card { border: 1px solid #ddd; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
-h2, h3 { color: #333; }
-section {
-    padding: 3rem 0;
-}
-.bg-light {
-    background-color: var(--secondary-color);
-}
+.btn-secondary:hover { background-color: #374291; }
+section { padding: 3rem 0; }
+.bg-light { background-color: var(--secondary-color); }
 
 /* --- Header e Navegação (Mobile First) --- */
-header {
-    background: #fff;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    position: fixed;
-    width: 100%;
-    z-index: 1000;
-    top: 0;
-}
-
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 70px;
-}
-
+header { background: #fff; box-shadow: 0 2px 10px rgba(0,0,0,0.1); position: fixed; width: 100%; z-index: 1000; top: 0; }
+nav { display: flex; justify-content: space-between; align-items: center; height: 70px; }
+/* Garante que o link do logo se comporte bem no layout flexível */
 nav .logo {
-    font-size: 1.8rem;
-    font-weight: 700;
-    text-decoration: none;
-    color: var(--primary-color);
-}
-
-.nav-links {
-    list-style: none;
-    position: absolute;
-    top: 70px;
-    left: 0;
-    right: 0;
-    background: #fff;
     display: flex;
-    flex-direction: column;
     align-items: center;
-    gap: 0;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.5s ease-in-out;
-}
-.nav-links li {
-    width: 100%;
-    text-align: center;
-}
-.nav-links li a {
-    padding: 1.5rem 0;
-    display: block;
-    text-decoration: none;
-    color: var(--text-color);
-    font-weight: 600;
+    /* Removemos estilos de texto que não são mais necessários */
 }
 
-.menu-icon {
-    display: block;
-    cursor: pointer;
+/* Define o tamanho da imagem do logo */
+nav .logo img {
+    height: 70px;  /* Ajuste este valor se quiser um logo maior ou menor */
+    width: auto;   /* Mantém a proporção correta da imagem */
 }
-.menu-icon .bar {
-    width: 25px;
-    height: 3px;
-    background-color: var(--text-color);
-    margin: 5px 0;
-    transition: 0.4s;
+.nav-links {
+    list-style: none; position: absolute; top: 70px; left: 0; right: 0;
+    background: #fff; display: flex; flex-direction: column; align-items: center;
+    gap: 0; max-height: 0; overflow: hidden; transition: max-height 0.5s ease-in-out;
 }
-
+.nav-links li { width: 100%; text-align: center; }
+.nav-links li a { padding: 1rem 0; display: block; text-decoration: none; color: var(--text-color); font-weight: 600; }
+.menu-icon { display: block; cursor: pointer; }
+.menu-icon .bar { width: 25px; height: 3px; background-color: var(--text-color); margin: 5px 0; transition: 0.4s; }
 .nav-active .nav-links { max-height: 500px; }
 .nav-active .menu-icon .bar:nth-child(1) { transform: rotate(-45deg) translate(-5px, 6px); }
 .nav-active .menu-icon .bar:nth-child(2) { opacity: 0; }
 .nav-active .menu-icon .bar:nth-child(3) { transform: rotate(45deg) translate(-5px, -6px); }
 
-/* --- Seção Hero --- */
+/* --- Seções Específicas --- */
 .hero {
     background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('images/capa.webp') no-repeat center center/cover;
-    min-height: 100vh;
-    color: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    margin-top: -70px;
+    min-height: 100vh; color: #fff; display: flex; justify-content: center;
+    align-items: center; text-align: center; margin-top: -70px;
 }
 .hero-content h1 { font-size: 2.5rem; }
 .hero-content p { font-size: 1.2rem; }
 
-/* --- Seção Sobre --- */
 .about-content { text-align: center; max-width: 700px; margin: 0 auto 3rem auto; }
-.about-text h3, .about-members h3 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-    color: var(--primary-color);
-}
 .about-members { text-align: center; }
-.members-row {
-    display: flex;
-    justify-content: center;
-    flex-direction: column; /* Mobile: empilhado */
-    align-items: center;
-    gap: 2rem;
-}
+.members-row { display: flex; justify-content: center; flex-direction: column; align-items: center; gap: 2rem; }
 .member-card { width: 150px; }
-.member-card img {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 3px solid var(--primary-color);
-}
+.member-card img { width: 120px; height: 120px; border-radius: 50%; object-fit: cover; border: 3px solid var(--primary-color); }
 .member-card h4 { margin-top: 0.5rem; font-size: 1rem; }
 .member-card p { font-size: 0.9rem; color: #555; }
 
-/* --- Seção Grade Curricular --- */
-.curriculum-grid-container h3, .accordion-container h3 {
-    text-align: center;
-    font-size: 1.5rem;
-    margin-bottom: 2rem;
-    color: var(--primary-color);
-}
-.curriculum-grid {
-    display: grid;
-    grid-template-columns: repeat(9, 200px);
-    gap: 5px;
-    overflow-x: auto;
-    padding-bottom: 1rem;
-}
+.grid { display: grid; grid-template-columns: 1fr; gap: 1.5rem; }
+.card { background: #fff; padding: 1.5rem; border: 1px solid #ddd; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); display: flex; flex-direction: column; }
+.card h3, .contact-card h3 { margin-top: 0; margin-bottom: 1rem; font-size: 1.2rem; color: var(--primary-color);}
+.card p { margin-bottom: 1rem; flex-grow: 1; font-size: 0.9rem; }
+
+.contact-grid { display: flex; flex-direction: column; gap: 2rem; margin-bottom: 3rem; }
+.contact-card { background: #fff; padding: 1.5rem; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+.contact-card p { margin-bottom: 0.5rem; }
+
+.curriculum-grid-container h3, .accordion-container h3 { text-align: center; font-size: 1.5rem; margin-bottom: 2rem; color: var(--primary-color); }
+.curriculum-grid { display: grid; grid-template-columns: repeat(9, 200px); gap: 5px; overflow-x: auto; padding-bottom: 1rem; }
 .period-column { background-color: #fff; border-radius: 8px; padding: 10px; text-align: center; }
 .period-column h4 { font-size: 0.9rem; margin-bottom: 10px; }
 .subject-box {
@@ -238,7 +110,6 @@ nav .logo {
 .subject-box.tcc { background-color: #fee2e2; border-color: #fecaca; color: #991b1b; }
 .subject-box.estagio { background-color: #fef3c7; border-color: #fde68a; color: #92400e; }
 
-/* Acordeão */
 .accordion { max-width: 800px; margin: 0 auto; text-align: left; }
 .accordion-button {
     background-color: #fff; color: #444; cursor: pointer; padding: 18px;
@@ -260,236 +131,160 @@ nav .logo {
     overflow: hidden; transition: max-height 0.3s ease-out;
     border-left: 1px solid #ddd; border-right: 1px solid #ddd;
 }
-.subject-detail { padding: 15px 0; border-bottom: 1px solid #eee; }
-.subject-detail:last-child { border-bottom: none; }
-.subject-detail h4 { margin-bottom: 5px; }
-.subject-detail p { margin: 0; color: #555; font-size: 0.95rem; }
+.subject-detail, .teacher-detail { padding: 15px 0; border-bottom: 1px solid #eee; }
+.subject-detail:last-child, .teacher-detail:last-child { border-bottom: none; }
+.subject-detail h4 { margin-bottom: 5px; color: var(--text-color); }
+.subject-detail p, .teacher-detail p { margin: 0; color: #555; font-size: 0.95rem; }
+.teacher-detail a { color: var(--primary-color); text-decoration: none; }
+.teacher-detail a:hover { text-decoration: underline; }
 
-/* --- Seção Horários (Tabs) --- */
 .tabs { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin-bottom: 2rem; }
 .tab-button {
-    padding: 8px 16px; font-family: var(--heading-font); font-weight: 600;
-    font-size: 0.9rem; border: 2px solid var(--primary-color); background-color: #fff;
-    color: var(--primary-color); border-radius: 50px; cursor: pointer; transition: all 0.3s ease;
+    padding: 8px 16px; font-family: var(--heading-font); font-weight: 600; font-size: 0.9rem;
+    border: 2px solid var(--primary-color); background-color: #fff; color: var(--primary-color);
+    border-radius: 50px; cursor: pointer; transition: all 0.3s ease;
 }
-.tab-button:hover { background-color: var(--primary-hover); color: #fff; border-color: var(--primary-hover); }
-.tab-button.active { background-color: var(--primary-color); color: #fff; }
+.tab-button:hover, .tab-button.active { background-color: var(--primary-color); color: #fff; }
 .tab-content .content { display: none; animation: fadeIn 0.5s ease; }
 .tab-content .content.active { display: block; }
 @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
 
-.schedule-wrapper { overflow-x: auto; padding-bottom: 1rem; }
-.schedule-table { width: 100%; border-collapse: collapse; text-align: center; }
-.schedule-table th, .schedule-table td {
-    padding: 8px 5px; border: 1px solid #ddd;
-    vertical-align: middle; font-size: 0.8rem;
-}
-.schedule-table td strong { font-size: 0.8rem; }
+.schedule-wrapper, .table-wrapper { overflow-x: auto; padding-bottom: 1rem; }
+.schedule-table, .custom-table { width: 100%; border-collapse: collapse; text-align: center; }
+.schedule-table th, .schedule-table td, .custom-table th, .custom-table td { padding: 8px 5px; border: 1px solid #ddd; vertical-align: middle; font-size: 0.8rem; }
+.schedule-table td strong, .custom-table td { font-size: 0.8rem; }
 .schedule-table td small { font-size: 0.7rem; color: #555; }
-.schedule-table thead { background-color: var(--primary-color); color: white; }
-.schedule-table tbody tr:nth-of-type(even) { background-color: #f0f0f0; }
-/*-- Sessao colegiado e secretaria*/
-.contact-grid { 
-    display: flex; 
-    flex-direction: column; /* Em mobile, os cards ficam um abaixo do outro */
-    gap: 2rem; 
-    margin-top: 2rem; 
+.schedule-table thead, .custom-table thead { background-color: var(--primary-color); color: white; }
+.custom-table { text-align: left; }
+
+.menu-grid { display: grid; grid-template-columns: 1fr; gap: 2rem; margin-bottom: 2rem; }
+.menu-card { background: #fff; padding: 1.5rem; border: 1px solid #ddd; border-radius: 8px; }
+.menu-card h3 { text-align: center; margin-top: 0; }
+.menu-card p { margin-bottom: 0.5rem; border-bottom: 1px solid #eee; padding-bottom: 0.5rem; }
+.menu-card p:last-child { border-bottom: none; }
+.menu-grid-single { max-width: 500px; margin: 0 auto; }
+.center-btn { text-align: center; }
+
+.contact-wrapper { display: flex; flex-direction: column; align-items: center; gap: 2.5rem; margin-top: 3rem; text-align: center; }
+.contact-form { width: 100%; display: flex; flex-direction: column; }
+form input, form textarea { margin-bottom: 1rem; padding: 15px; border: 1px solid #ccc; border-radius: 8px; font-family: var(--body-font); font-size: 1rem; }
+form input:focus, form textarea:focus { outline: none; border-color: var(--primary-color); }
+.contact-info h3 { color: var(--primary-color); margin-bottom: 1rem; }
+.contact-info a, .contact-info p { display: block; margin-bottom: 1rem; text-decoration: none; color: var(--text-color); }
+
+.whatsapp-fab {
+    position: fixed; bottom: 25px; right: 25px; background-color: #25D366; color: #FFF; width: 50px;
+    height: 50px; border-radius: 50px; display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2); text-decoration: none; z-index: 100; transition: all 0.3s ease; overflow: hidden;
+}
+.whatsapp-fab span { display: none; margin-left: 8px; font-weight: 600; font-size: 0.9rem; white-space: nowrap; }
+.whatsapp-fab:hover { width: auto; padding: 0 20px 0 15px; }
+.whatsapp-fab:hover span { display: inline; }
+
+.footer { background: #333; color: #fff; text-align: center; padding: 2rem 0; }
+
+/* --- Seção Calendário --- */
+.timeline {
+    list-style: none;
+    padding: 0;
+    position: relative;
+    max-width: 600px;
+    margin: 2rem auto;
 }
 
-.contact-card { 
-    background: #fff; 
-    padding: 1.5rem; 
-    border-radius: 10px; 
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05); 
+/* A linha vertical da timeline (versão mobile) */
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 10px;
+    width: 3px;
+    background-color: var(--primary-color);
+    border-radius: 3px;
 }
 
-.contact-card h3 { 
-    margin-top: 0; 
-    margin-bottom: 1rem; 
-    color: var(--primary-color); 
-    font-size: 1.3rem; 
+.timeline li {
+    margin-bottom: 2rem;
+    position: relative;
+    padding-left: 40px;
 }
 
-.contact-card p { 
-    margin-bottom: 0.5rem; 
+/* As bolinhas na linha do tempo */
+.timeline li::before {
+    content: '';
+    position: absolute;
+    left: -2px;
+    top: 5px;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    border: 3px solid #fff;
+    z-index: 1;
 }
 
-/* Para telas maiores, a direção muda para linha */
+/* Garante que a bolinha fique por cima da cor de fundo cinza, se houver */
+#calendario.bg-light .timeline li::before {
+    border-color: var(--secondary-color);
+}
+
+.timeline li strong {
+    font-size: 1.2rem;
+    color: var(--primary-color);
+}
+
+.center-btn {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+
+/* --- ESTILOS PARA TELAS MAIORES (TABLET E DESKTOP) --- */
 @media(min-width: 768px) {
-    .contact-grid { 
-        flex-direction: row; 
+    /* Centraliza a linha da timeline e prepara para o zig-zag */
+    .timeline::before {
+        left: 50%;
+        margin-left: -1.5px;
+    }
+
+    /* Posiciona os itens da lista na esquerda */
+    .timeline li {
+        width: 50%;
+        padding-left: 0;
+        padding-right: 70px;
+        float: left;
+        text-align: right;
+        clear: both;
+    }
+
+    /* Move a bolinha para a direita, sobre a linha central */
+    .timeline li::before {
+        left: 100%;
+        margin-left: -14px;
+    }
+
+    /* Pega os itens pares (2º, 4º, etc.) e os joga para a direita */
+    .timeline li:nth-child(even) {
+        float: right;
+        text-align: left;
+        padding-left: 70px;
+        padding-right: 0;
+    }
+
+    /* Move a bolinha dos itens pares para a esquerda */
+    .timeline li:nth-child(even)::before {
+        left: 0;
+        margin-left: -14px;
+    }
+    
+    /* Garante que a seção contenha os elementos flutuantes */
+    .timeline {
+        overflow: auto;
     }
 }
 
-/* corpo docente e noticias*/
-.grid { 
-    display: grid; 
-    grid-template-columns: 1fr; /* Em mobile, os cards ficam em uma coluna */
-    gap: 1.5rem; 
-}
-
-.card { 
-    background: #fff; 
-    padding: 0; 
-    border: 1px solid #ddd; 
-    border-radius: 10px; 
-    box-shadow: 0 4px 15px rgba(0,0,0,0.08); 
-    display: flex; 
-    flex-direction: column; 
-    overflow: hidden; 
-}
-
-.card-img { 
-    width: 100%; 
-    height: 200px; 
-    object-fit: cover; 
-}
-
-.card-body { 
-    padding: 1.5rem; 
-    display: flex; 
-    flex-direction: column; 
-    flex-grow: 1; 
-}
-
-.card-date { 
-    color: #6c757d; 
-    font-size: 0.8rem; 
-    margin-bottom: 0.5rem; 
-}
-
-.card h3 { 
-    margin-bottom: 1rem; 
-    font-size: 1.2rem; 
-}
-
-.card p { 
-    margin-bottom: 1rem; 
-    flex-grow: 1; 
-    font-size: 0.9rem; 
-}
-
-.card-link { 
-    font-weight: 600; 
-    color: var(--primary-color); 
-    text-decoration: none; 
-}
-
-.teacher-links a { 
-    margin-right: 10px; 
-    text-decoration: none; 
-}
-
-/* Para telas maiores, o grid se ajusta para múltiplas colunas */
-
-
-/* Atividades complementares*/
-.table-wrapper { 
-    overflow-x: auto; /* Permite rolagem horizontal em telas pequenas */
-}
-
-.custom-table { 
-    width: 100%; 
-    border-collapse: collapse; 
-    text-align: left; 
-}
-
-.custom-table th, .custom-table td { 
-    padding: 12px; 
-    border: 1px solid #ddd; 
-    font-size: 0.9rem; 
-}
-
-.custom-table thead { 
-    background-color: var(--primary-color); 
-    color: white; 
-}
-
-.custom-table tbody tr:nth-of-type(even) { 
-    background-color: #f0f0f0; 
-}
-/* --- Grid para Cards (Eventos) --- */
-.grid { display: grid; grid-template-columns: 1fr; gap: 2rem; }
-.card {
-    background: #fff; padding: 2rem; border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.08); display: flex; flex-direction: column;
-}
-.card h3 { margin-bottom: 1rem; }
-.card p { margin-bottom: 0.5rem; flex-grow: 1; }
-
-/* --- Seção Calendário --- */
-.timeline { list-style: none; padding: 0; position: relative; max-width: 600px; margin: 2rem auto; }
-.timeline::before {
-    content: ''; position: absolute; top: 0; bottom: 0;
-    left: 10px; width: 3px; background-color: var(--primary-color); border-radius: 3px;
-}
-.timeline li { margin-bottom: 2rem; position: relative; padding-left: 40px; }
-.timeline li::before {
-    content: ''; position: absolute; left: -2px; top: 5px; width: 25px;
-    height: 25px; border-radius: 50%; background-color: var(--primary-color);
-    border: 3px solid #fff; z-index: 1;
-}
-#calendario.bg-light .timeline li::before { border-color: var(--secondary-color); }
-.timeline li strong { font-size: 1.2rem; color: var(--primary-color); }
-.center-btn { text-align: center; margin-top: 2rem; }
-
-/* --- Seção Contato --- */
-.contact-wrapper {
-    display: flex; flex-direction: column; align-items: center;
-    gap: 2.5rem; margin-top: 3rem; text-align: center;
-}
-.contact-form { width: 100%; display: flex; flex-direction: column; }
-form input, form textarea {
-    margin-bottom: 1rem; padding: 15px; border: 1px solid #ccc;
-    border-radius: 8px; font-family: var(--body-font); font-size: 1rem;
-}
-form input:focus, form textarea:focus { outline: none; border-color: var(--primary-color); }
-.contact-info h3 { color: var(--primary-color); margin-bottom: 1rem; }
-.contact-info a, .contact-info p {
-    display: block; margin-bottom: 1rem; text-decoration: none; color: var(--text-color);
-}
-
-/* --- Botão Flutuante do WhatsApp --- */
-.whatsapp-fab {
-    position: fixed;
-    bottom: 25px;
-    right: 25px;
-    background-color: #25D366;
-    color: #FFF;
-    width: 50px;
-    height: 50px;
-    border-radius: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-    text-decoration: none;
-    z-index: 100;
-    transition: all 0.3s ease;
-    overflow: hidden;
-}
-
-.whatsapp-fab span {
-    display: none;
-    margin-left: 8px;
-    font-weight: 600;
-    font-size: 0.9rem;
-    white-space: nowrap;
-}
-
-.whatsapp-fab:hover {
-    width: auto;
-    padding: 0 20px 0 15px;
-}
-
-.whatsapp-fab:hover span {
-    display: inline;
-}
-
-/* --- Footer --- */
-.footer { background: #333; color: #fff; text-align: center; padding: 2rem 0; }
-
-/* --- ####### ESTILOS PARA TELAS MAIORES (TABLET E DESKTOP) ####### --- */
+/* --- ESTILOS PARA TELAS MAIORES (TABLET E DESKTOP) --- */
 @media(min-width: 768px) {
     .container { width: 85%; }
     h2 { font-size: 2.5rem; }
@@ -497,7 +292,7 @@ form input:focus, form textarea:focus { outline: none; border-color: var(--prima
     
     .nav-links {
         position: static; flex-direction: row; max-height: none;
-        width: auto; background: transparent; gap: 2rem;
+        width: auto; background: transparent; gap: 1.5rem;
     }
     .nav-links li { width: auto; }
     .nav-links li a { padding: 0 0 5px 0; position: relative; }
@@ -512,35 +307,20 @@ form input:focus, form textarea:focus { outline: none; border-color: var(--prima
     .hero p { font-size: 1.5rem; }
     
     .members-row { flex-direction: row; }
-    .grid { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+    .grid { grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); }
     
     .schedule-table { min-width: 800px; }
     .schedule-table th, .schedule-table td { padding: 12px 10px; font-size: 0.9rem; }
     .schedule-table td strong { font-size: 0.9rem; }
     .schedule-table td small { font-size: 0.8rem; }
+    .custom-table th, .custom-table td { font-size: 1rem; }
     
-    .timeline { overflow: auto; }
-    .timeline::before { left: 50%; margin-left: -1.5px; }
-    .timeline li {
-        width: 50%; padding: 0 70px 0 0; float: left;
-        text-align: right; clear: both;
-    }
-    .timeline li::before { left: 100%; margin-left: -14px; }
-    .timeline li:nth-child(even) {
-        float: right; text-align: left;
-        padding: 0 0 0 70px;
-    }
-    .timeline li:nth-child(even)::before { left: 0; margin-left: -14px; }
-
     .contact-wrapper { flex-direction: row; text-align: left; align-items: flex-start; }
     .contact-form { flex: 2; }
     .contact-info { flex: 1; padding-top: 10px; }
 
-    /* corpo docente e noticias*/
-    .grid { 
-        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); 
-    }
-
+    .contact-grid { flex-direction: row; }
+    .menu-grid { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
 }
 
 @media(min-width: 1024px) {

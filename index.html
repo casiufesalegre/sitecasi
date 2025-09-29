@@ -12,13 +12,14 @@
 <body>
     <header>
         <nav class="container">
-            <a href="#home" class="logo">CASI</a>
-            <ul class="nav-links">
-                <li><a href="#home">Início</a></li>
+            <a href="#home" class="logo"><img src="images/CORVOLOGO.jpg" alt="Logo do CASI"></a>           
+             <ul class="nav-links">
                 <li><a href="#sobre">Sobre</a></li>
                 <li><a href="#docentes">Docentes</a></li>
                 <li><a href="#grade-curricular">Grade</a></li>
                 <li><a href="#horarios">Horários</a></li>
+                <li><a href="#calendario">Calendário</a></li>
+                <li><a href="#cardapio-ru">Cardápio RU</a></li>
                 <li><a href="#eventos">Eventos</a></li>
                 <li><a href="#contato">Contato</a></li>
             </ul>
@@ -56,11 +57,6 @@
                             <img src="images/marlon.jpeg" alt="Foto do Presidente Marlon Domingos Cury">
                             <h4>Marlon Domingos Cury</h4>
                             <p>Presidente</p>
-                        </div>
-                        <div class="member-card">
-                            <img src="images/guilherme.jpg" alt="Foto do Vice-Presidente Guilherme Martins">
-                            <h4>Guilherme Martins</h4>
-                            <p>Vice-Presidente</p>
                         </div>
                         <div class="member-card">
                             <img src="images/eduardo.jpeg" alt="Foto do Secretário Geral Eduardo Campos Batista">
@@ -140,13 +136,12 @@
                 </div>
 
                 <div class="accordion-container">
+                    <br>
                     <h3>Detalhes e Pré-requisitos por Período</h3>
                     <div class="accordion" id="grade-accordion">
                         </div>
                 </div>
-            </div>
         </section> 
-
         <section id="atividades-complementares">
             <div class="container">
                 <h2>Atividades Complementares</h2>
@@ -209,57 +204,136 @@
             <div class="container">
                 <h2>Horários do Semestre</h2>
                 <p class="section-subtitle">Selecione o período para visualizar os horários das aulas.</p>
-                <div class="tabs">
+                <div class="tabs" id="horarios-tabs">
                     <button class="tab-button active" data-target="periodo1">1º Período</button>
                     <button class="tab-button" data-target="periodo3">3º Período</button>
                     <button class="tab-button" data-target="periodo5">5º Período</button>
                     <button class="tab-button" data-target="periodo7">7º Período</button>
                     <button class="tab-button" data-target="periodo9">9º Período</button>
                 </div>
-                <div class="tab-content">
+                <div class="tab-content" id="horarios-tab-content">
                     </div>
             </div>
         </section>
+    </section> <section id="calendario">
+        <div class="container">
+            <h2>Calendário Acadêmico</h2>
+            <p class="section-subtitle">Datas importantes do semestre. Consulte sempre a fonte oficial para informações atualizadas.</p>
+            <ul class="timeline">
+                <li>
+                    <strong>22/09</strong>
+                    <p>Início do semestre letivo</p>
+                </li>
+                <li>
+                    <strong>22/09 a 10/10</strong>
+                    <p>Período para solicitação de trancamento automático de curso (TMA)</p>
+                </li>
+                <li>
+                    <strong>23/09 a 25/09</strong>
+                    <p>Período de cancelamento de disciplina no Portal do Aluno</p>
+                </li>
+                <li>
+                    <strong>14/10 a 20/10</strong>
+                    <p>Período de ajuste de matrícula no Portal do Aluno - 2º escopo</p>
+                </li>
+                 <li>
+                    <strong>29/10 a 03/11</strong>
+                    <p>Solicitação de aplicação do art. 17 (exercícios domiciliares)</p>
+                </li>
+            </ul>
+            <div class="center-btn">
+                <a href="https://socs.ufes.br/sites/daocs.ufes.br/files/field/anexo/resolucao_no_110.2025_-_calendario_academico_2025_1.pdf" class="btn" target="_blank">Acessar Calendário Oficial da UFES</a>
+            </div>
+        </div>
+    </section> <section id="vagas" class="bg-light">
+        <div class="container">
+            <h2>Vagas e Oportunidades</h2>
+            <p class="section-subtitle">Busque por estágios e empregos diretamente pelo nosso chatbot no WhatsApp!</p>
+            <div class="center-btn">
+                 <a href="https://chat.whatsapp.com/B8KMYLO9xPnJn2WQ3bS44x" class="btn" target="_blank">
+                    Conversar com o Chatbot
+                </a>
+            </div>
+        </div>
+    </section>
 
-        <section id="eventos">
-             <div class="container">
-                <h2>Próximos Minicursos</h2>
-                <div class="grid">
-                     <div class="card">
-                        <h3>Automação de Processos com n8n</h3>
-                        <p><strong>Data:</strong> 11/10/2025</p>
-                        <p><strong>Ministrantes:</strong> Pedro Lucas Gomes de Oliveira e Erik Estevam Martins Rodrigues Oliveira</p>
-                        <a href="https://www.cognitoforms.com/CentroAcadêmico/n8n" target="_blank" rel="noopener noreferrer" class="btn-secondary">Inscreva-se</a>
+        <section id="cardapio-ru">
+            <div class="container">
+                <h2>Cardápio do RU</h2>
+                <p class="section-subtitle">Cardápio da semana para Alegre e Jerônimo Monteiro.</p>
+
+                <div class="contact-grid" id="ru-hours">
+                          <div class="contact-card">
+                        <h3>Alegre</h3>
+                        <p><strong>Café da manhã:</strong> 06h30min às 07h30min</p>
+                        <p><strong>Almoço:</strong> 11h às 13h30min</p>
+                        <p><strong>Jantar:</strong> 17h30min às 19h30min</p>
                     </div>
-                    <div class="card">
-                        <h3>Introdução ao Desenvolvimento de APIs</h3>
-                        <p><strong>Data:</strong> 25/10/2025</p>
-                        <p><strong>Ministrante:</strong> Hiago Moreira</p>
-                        <a href="#" class="btn-secondary">Inscreva-se</a>
+                    <div class="contact-card">
+                        <h3>Jerônimo Monteiro</h3>
+                        <p><strong>Café da manhã:</strong> 07h às 8h</p>
+                        <p><strong>Almoço:</strong> 11h30min às 13h30min</p>
+                        <p><strong>Jantar:</strong> 17h15min às 18h30min</p>
                     </div>
-                     <div class="card">
-                        <h3>Construção de um App Fullstack</h3>
-                        <p><strong>Datas:</strong> 08/11/2025 e 15/11/2025</p>
-                        <p><strong>Ministrante:</strong> Hiago Moreira</p>
-                        <a href="#" class="btn-secondary">Inscreva-se</a>
                     </div>
-                    <div class="card">
-                        <h3>Uso de Frameworks Modernos</h3>
-                        <p><strong>Data:</strong> 22/11/2025</p>
-                        <p><strong>Ministrante:</strong> Guilherme Diniz Lau</p>
-                        <a href="#" class="btn-secondary">Inscreva-se</a>
+                
+                <div class="tabs" id="cardapio-tabs">
+                    <button class="tab-button active" data-target="segunda">Segunda</button>
+                    <button class="tab-button" data-target="terca">Terça</button>
+                    <button class="tab-button" data-target="quarta">Quarta</button>
+                    <button class="tab-button" data-target="quinta">Quinta</button>
+                    <button class="tab-button" data-target="sexta">Sexta</button>
+                    <button class="tab-button" data-target="sabado">Sábado</button>
+                </div>
+        
+                <div class="tab-content" id="cardapio-tab-content">
                     </div>
-                    <div class="card">
-                        <h3>Cibersegurança para Iniciantes: Como se Proteger no Mundo Digital</h3>
-                        <p><strong>Data:</strong> 06/12/2025</p>
-                        <p><strong>Ministrante:</strong> Gabriel Tetzner Menegueti</p>
-                        <a href="#" class="btn-secondary">Inscreva-se</a>
-                    </div>
+        
+                <div class="center-btn">
+                     <a href="https://ru.alegre.ufes.br/cardapio/" class="btn" target="_blank" rel="noopener noreferrer">Ver Site Oficial do RU</a>
                 </div>
             </div>
         </section>
-  
-        <section id="contato" class="bg-light">
+
+        <section id="eventos" class="bg-light">
+            <div class="container">
+               <h2>Próximos Minicursos</h2>
+               <div class="grid">
+                    <div class="card">
+                       <h3>Automação de Processos com n8n</h3>
+                       <p><strong>Data:</strong> 11/10/2025</p>
+                       <p><strong>Ministrantes:</strong> Pedro Lucas Gomes de Oliveira e Erik Estevam Martins Rodrigues Oliveira</p>
+                       <a href="https://www.cognitoforms.com/CentroAcadêmico/n8n" target="_blank" rel="noopener noreferrer" class="btn-secondary">Inscreva-se</a>
+                   </div>
+                   <div class="card">
+                       <h3>Introdução ao Desenvolvimento de APIs</h3>
+                       <p><strong>Data:</strong> 25/10/2025</p>
+                       <p><strong>Ministrante:</strong> Hiago Moreira</p>
+                       <a href="#" class="btn-secondary">Inscreva-se</a>
+                   </div>
+                    <div class="card">
+                       <h3>Construção de um App Fullstack</h3>
+                       <p><strong>Datas:</strong> 08/11/2025 e 15/11/2025</p>
+                       <p><strong>Ministrante:</strong> Hiago Moreira</p>
+                       <a href="#" class="btn-secondary">Inscreva-se</a>
+                   </div>
+                   <div class="card">
+                       <h3>Uso de Frameworks Modernos</h3>
+                       <p><strong>Data:</strong> 22/11/2025</p>
+                       <p><strong>Ministrante:</strong> Guilherme Diniz Lau</p>
+                       <a href="#" class="btn-secondary">Inscreva-se</a>
+                   </div>
+                   <div class="card">
+                       <h3>Cibersegurança para Iniciantes: Como se Proteger no Mundo Digital</h3>
+                       <p><strong>Data:</strong> 06/12/2025</p>
+                       <p><strong>Ministrante:</strong> Gabriel Tetzner Menegueti</p>
+                       <a href="#" class="btn-secondary">Inscreva-se</a>
+                   </div>
+               </div>
+           </div>
+       </section>
+        
+        <section id="contato">
             <div class="container">
                 <h2>Fale Conosco</h2>
                 <div class="contact-wrapper">
