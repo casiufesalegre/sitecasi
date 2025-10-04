@@ -239,6 +239,15 @@ form input:focus, form textarea:focus { outline: none; border-color: var(--prima
     margin-top: 2rem;
 }
 
+.imgLab {
+    display: block;
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    margin: 3rem auto 0;
+    border-radius: 8px;
+}
+
 
 /* --- ESTILOS PARA TELAS MAIORES (TABLET E DESKTOP) --- */
 @media(min-width: 768px) {
