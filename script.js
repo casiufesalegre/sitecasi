@@ -58,14 +58,159 @@ document.addEventListener('DOMContentLoaded', function() {
         periodo9: `<tbody><tr><td>18:00 às 20:00</td><td><strong>Algoritmos Numéricos</strong><small> Sala 04 - Prédio Central</small></td><td><strong>Sistemas de Softwares Livres</strong><small> Lab. Desenv. SW 2 - Reuni</small></td><td><strong>Algoritmos Numéricos</strong><small> Sala 04 - Prédio Central</small></td><td></td><td></td></tr><tr><td>20:00 às 22:00</td><td><strong>Tópicos Especiais em Redes de Computadores I</strong><small> Lab. Desenv. SW 2 - Reuni</small></td><td><strong>Tópicos Especiais em Análise Combinatória</strong><small> Lab. Desenv. SW I - Reuni</small></td><td><strong>Tópicos Especiais em Análise Combinatória</strong><small> Lab. Desenv. SW I - Reuni</small></td><td></td><td></td></tr></tbody>`
     };
 
-    const cardapioData = {
-        segunda: `<div class="menu-grid"><div class="menu-card"><h3>Café da Manhã</h3><p><strong>Pão:</strong> Pão de Hot Dog (CG)</p><p><strong>Complemento:</strong> Margarina com Sal</p><p><strong>Bebidas:</strong> Café, Leite Integral (CL), Suco de Uva</p><p><strong>Fruta:</strong> Melão</p></div><div class="menu-card"><h3>Almoço</h3><p><strong>Prato Proteico:</strong> Carne moída</p><p><strong>Opção Vegetariana:</strong> Proteina de Soja com cenoura (CG)</p><p><strong>Salada:</strong> Acelga com laranja  e Beterraba ralada</p><p><strong>Acompanhamentos:</strong> Arroz, Feijão e Espaguete ao suco</p><p><strong>Sobremesa:</strong> Doce de leite / Maçã</p><p><strong>Suco:</strong> Caju</p></div><div class="menu-card"><h3>Jantar</h3><p><strong>Prato Proteico:</strong> Linguiça toscana assada (CG)</p><p><strong>Opção Vegetariana:</strong> Ovos mexidos</p><p><strong>Salada:</strong> Alface com Manga Grão-de-Bico ao Vinagrete</p><p><strong>Acompanhamentos:</strong> Arroz, Feijão e Creme de Inhame (CL)</p><p><strong>Sobremesa:</strong>Goiabada/ Laranja </p><p><strong>Suco:</strong> Abacaxi</div></div>`,
-        terca: `<div class="menu-grid"><div class="menu-card"><h3>Café da Manhã</h3><p><strong>Pão:</strong> Pão Francês(CG)</p><p><strong>Complemento:</strong> Manteiga com Sal</p><p><strong>Bebidas:</strong> Café, Leite Integral (CL), Suco de Caju</p><p><strong>Fruta:</strong> Goiaba</p></div><div class="menu-card"><h3>Almoço</h3><p><strong>Prato Proteico:</strong> Carne de Panela Acebolada</p><p><strong>Opção Vegetariana:</strong> Omelete com Salsa</p><p><strong>Salada:</strong> Alface com Manga e Salada de Grão-de-Bico</p><p><strong>Acompanhamentos:</strong> Arroz,  Feijão e Legumes Sauté (CL)</p><p><strong>Sobremesa:</strong> Melão</p><p><strong>Suco:</strong> Acerola</p></div><div class="menu-card"><h3>Jantar</h3><p><strong>Prato Proteico:</strong> Pernil Assado ao Molho de Abacaxi</p><p><strong>Opção Vegetariana:</strong> Almôndegas de Soja ao Sugo (CG)</p><p><strong>Salada:</strong> Repolho Bicolor e Cenoura ralada</p><p><strong>Acompanhamentos:</strong> Arroz, Feijão e Polenta Cremosa</p><p><strong>Sobremesa:</strong> Mamão</p><p><strong>Suco:</strong> Cajú</p></div></div>`,
-        quarta: `<div class="menu-grid"><div class="menu-card"><h3>Café da Manhã</h3><p><strong>Pão:</strong> Pão de Hot Dog (CG)</p><p><strong>Complemento:</strong> Manteiga com Sal</p><p><strong>Bebidas:</strong> Café, Leite Integral (CL), Suco de Manga</p><p><strong>Fruta:</strong> Maçã</p></div><div class="menu-card"><h3>Almoço</h3><p><strong>Prato Proteico:</strong> Fricassé de Frango (CL)</p><p><strong>Opção Vegetariana:</strong> Almôndegas de Soja ao Sugo (CG)</p><p><strong>Salada:</strong>Almeirão  e Vagem com Cenoura</p><p><strong>Acompanhamentos:</strong> Arroz, Feijão e  Arroz temperado</p><p><strong>Sobremesa:</strong> Goiaba</p><p><strong>Suco:</strong> Manga</p></div><div class="menu-card"><h3>Jantar</h3><p><strong>Prato Proteico:</strong> Frango ao Molho Branco (CL)</p><p><strong>Opção Vegetariana:</strong> Ovos Fritos</p><p><strong>Salada:</strong>Almeirão e Tabule (CG)</p><p><strong>Acompanhamentos:</strong> Arroz, Feijão e Abóbora Refogada (CG)</p><p><strong>Sobremesa:</strong> Gelatina de Uva/Melão</p><p><strong>Suco:</strong> Manga</p></div></div>`,
-        quinta: `<div class="menu-grid"><div class="menu-card"><h3>Café da Manhã</h3><p><strong>Pão:</strong> Pão Francês(CG)</p><p><strong>Complemento:</strong> Margarina com Sal</p><p><strong>Bebidas:</strong> Café, Leite Integral (CL), Suco de Morango</p><p><strong>Fruta:</strong> Banana Prata</p></div><div class="menu-card"><h3>Almoço</h3><p><strong>Prato Proteico:</strong> Bife Acebolado</p><p><strong>Opção Vegetariana:</strong>Quibe de Abóbora Vegano (CG)</p><p><strong>Salada:</strong> Rúcula com Manga e Inhame</p><p><strong>Acompanhamentos:</strong> Arroz, Feijão e Canjiquinha</p><p><strong>Sobremesa:</strong> Mousse de Maracujá/ Laranja</p><p><strong>Suco:</strong> Morango</p></div><div class="menu-card"><h3>Jantar</h3><p><strong>Prato Proteico:</strong> Sobrecoxa de Frango Assada</p><p><strong>Opção Vegetariana:</strong> Quibe Vegetariano (CG)</p><p><strong>Salada:</strong> Alface e tomate</p><p><strong>Acompanhamentos:</strong> Arroz, Feijão e Virado de Couve</p><p><strong>Sobremesa:</strong> Melão</p><p><strong>Suco:</strong> Morango</p></div></div>`,
-        sexta: `<div class="menu-grid"><div class="menu-card"><h3>Café da Manhã</h3><p><strong>Pão:</strong> Pão de Hot Dog(CG)</p><p><strong>Complemento:</strong> Manteiga com Sal</p><p><strong>Bebidas:</strong> Café, Leite Integral (CL), Suco de Abacaxi</p><p><strong>Fruta:</strong> Laranja</p></div><div class="menu-card"><h3>Almoço</h3><p><strong>Prato Proteico:</strong> Filé de Peixe à Milanesa (CG)</p><p><strong>Opção Vegetariana:</strong> Moqueca de Grão-de-Bico</p><p><strong>Salada:</strong> Alface/Beterraba e Pepino com Vinagrete</p><p><strong>Acompanhamentos:</strong> Arroz, Feijão e Purê de Batata (CL)</p><p><strong>Sobremesa:</strong> Melancia</p><p><strong>Suco:</strong> Uva</p></div><div class="menu-card"><h3>Jantar</h3><p><strong>Prato Proteico:</strong> Lagarto Assado</p><p><strong>Opção Vegetariana:</strong> Proteína de Soja Refogada com Ervilha (CG)</p><p><strong>Salada:</strong> Acelga com Manga e Cenoura Cozida</p><strong>Acompanhamentos:</strong> Arroz, Feijão e Espaguete ao Sugo (CG)</p><p><strong>Sobremesa:</strong> Maçã</p><p><strong>Suco:</strong> Acerola</p></div></div>`,
-        sabado: `<div class="menu-grid menu-grid-single"><div class="menu-card"><h3>Almoço</h3><p><strong>Salada:</strong> Salada de Pepino Refrescante e Cenoura Cozida</p><p><strong>Prato Proteico:</strong> Feijoada</p><p><strong>Opção Vegetariana:</strong> Torta de Grão-de-Bico com Couve e Cenoura</p><p><strong>Acompanhamentos:</strong> Arroz, Feijão e Farofa de Cebola</p><p><strong>Sobremesa:</strong> Laranja</p><p><strong>Suco:</strong> Abacaxi</p></div></div>`
-    };
+   const cardapioData = {
+            segunda: `<div class="menu-grid">
+              <div class="menu-card">
+                <h3>Café da Manhã</h3>
+                <p><strong>Pão:</strong> Pão Francês (CG)</p>
+                <p><strong>Complemento:</strong> Margarina com Sal</p>
+                <p><strong>Bebidas:</strong> Café, Leite Integral (CL), Suco de Morango</p>
+                <p><strong>Fruta:</strong> Banana</p>
+              </div>
+              <div class="menu-card">
+                <h3>Almoço</h3>
+                <p><strong>Prato Proteico:</strong> Sassami à Milanesa (CG)</p>
+                <p><strong>Opção Vegetariana:</strong> Tropeiro de Soja</p>
+                <p><strong>Salada:</strong> Acelga com Tomate e Beterraba Cozida</p>
+                <p><strong>Acompanhamentos:</strong> Arroz, Feijão e Creme de Milho (CL)</p>
+                <p><strong>Sobremesa:</strong> Doce Pé de Moleque / Goiaba</p>
+                <p><strong>Suco:</strong> Caju</p>
+              </div>
+              <div class="menu-card">
+                <h3>Jantar</h3>
+                <p><strong>Prato Proteico:</strong> Estrogonofe de Frango (CL)</p>
+                <p><strong>Opção Vegetariana:</strong> Quibe de Abóbora Vegano (CG)</p>
+                <p><strong>Salada:</strong> Repolho Bicolor e Cenoura com Vagem</p>
+                <p><strong>Acompanhamentos:</strong> Arroz, Feijão e Arroz Temperado</p>
+                <p><strong>Sobremesa:</strong> Mamão Formosa</p>
+                <p><strong>Suco:</strong> Morango</p>
+              </div>
+            </div>`,
+          
+            terca: `<div class="menu-grid">
+              <div class="menu-card">
+                <h3>Café da Manhã</h3>
+                <p><strong>Pão:</strong> Pão de Hot Dog (CG)</p>
+                <p><strong>Complemento:</strong> Manteiga com Sal</p>
+                <p><strong>Bebidas:</strong> Café, Leite Integral (CL), Suco de Acerola</p>
+                <p><strong>Fruta:</strong> Laranja</p>
+              </div>
+              <div class="menu-card">
+                <h3>Almoço</h3>
+                <p><strong>Prato Proteico:</strong> Escondidinho de Carne Moída</p>
+                <p><strong>Opção Vegetariana:</strong> Escondidinho de Proteína de Soja</p>
+                <p><strong>Salada:</strong> Repolho Bicolor e Abobrinha ao Vinagrete</p>
+                <p><strong>Acompanhamentos:</strong> Arroz, Feijão e Espaguete ao Sugo (CG)</p>
+                <p><strong>Sobremesa:</strong> Melão</p>
+                <p><strong>Suco:</strong> Morango</p>
+              </div>
+              <div class="menu-card">
+                <h3>Jantar</h3>
+                <p><strong>Prato Proteico:</strong> Bife Acebolado</p>
+                <p><strong>Opção Vegetariana:</strong> Ovos Fritos</p>
+                <p><strong>Salada:</strong> Alface e Beterraba Cozida</p>
+                <p><strong>Acompanhamentos:</strong> Arroz, Feijão e Farofa de Banana da Terra (CL)</p>
+                <p><strong>Sobremesa:</strong> Doce Pé de Moleque / Maçã</p>
+                <p><strong>Suco:</strong> Caju</p>
+              </div>
+            </div>`,
+          
+            quarta: `<div class="menu-grid">
+              <div class="menu-card">
+                <h3>Café da Manhã</h3>
+                <p><strong>Pão:</strong> Pão Francês (CG)</p>
+                <p><strong>Complemento:</strong> Margarina com Sal</p>
+                <p><strong>Bebidas:</strong> Café, Leite Integral (CL), Suco de Manga</p>
+                <p><strong>Fruta:</strong> Melancia</p>
+              </div>
+              <div class="menu-card">
+                <h3>Almoço</h3>
+                <p><strong>Prato Proteico:</strong> Estrogonofe de Carne (CG/CL)</p>
+                <p><strong>Opção Vegetariana:</strong> Estrogonofe de Proteína de Soja (CG)</p>
+                <p><strong>Salada:</strong> Almeirão com Rúcula e Cenoura com Brócolis</p>
+                <p><strong>Acompanhamentos:</strong> Arroz, Feijão e Purê de Mandioquinha (CL)</p>
+                <p><strong>Sobremesa:</strong> Gelatina de Morango / Maçã</p>
+                <p><strong>Suco:</strong> Manga</p>
+              </div>
+              <div class="menu-card">
+                <h3>Jantar</h3>
+                <p><strong>Prato Proteico:</strong> Copa Lombo Grelhado</p>
+                <p><strong>Opção Vegetariana:</strong> Tropeiro de Soja</p>
+                <p><strong>Salada:</strong> Tomate e Couve com Abacaxi</p>
+                <p><strong>Acompanhamentos:</strong> Arroz, Feijão e Feijão Tropeiro</p>
+                <p><strong>Sobremesa:</strong> Goiaba</p>
+                <p><strong>Suco:</strong> Manga</p>
+              </div>
+            </div>`,
+          
+            quinta: `<div class="menu-grid">
+              <div class="menu-card">
+                <h3>Café da Manhã</h3>
+                <p><strong>Pão:</strong> Pão de Hot Dog (CG)</p>
+                <p><strong>Complemento:</strong> Manteiga com Sal</p>
+                <p><strong>Bebidas:</strong> Café, Leite Integral (CL), Suco de Abacaxi</p>
+                <p><strong>Fruta:</strong> Maçã</p>
+              </div>
+              <div class="menu-card">
+                <h3>Almoço</h3>
+                <p><strong>Prato Proteico:</strong> Bife de Pernil Acebolado</p>
+                <p><strong>Opção Vegetariana:</strong> Hambúrguer de Soja (CG)</p>
+                <p><strong>Salada:</strong> Couve com Abacaxi e Salada de Soja</p>
+                <p><strong>Acompanhamentos:</strong> Arroz, Feijão e Farofa de Banana da Terra</p>
+                <p><strong>Sobremesa:</strong> Banana</p>
+                <p><strong>Suco:</strong> Acerola</p>
+              </div>
+              <div class="menu-card">
+                <h3>Jantar</h3>
+                <p><strong>Prato Proteico:</strong> Peixe Desfiado</p>
+                <p><strong>Opção Vegetariana:</strong> Escondidinho de Proteína de Soja</p>
+                <p><strong>Salada:</strong> Alface e Pepino com Tomate</p>
+                <p><strong>Acompanhamentos:</strong> Arroz, Feijão e Legumes Sauté (CL)</p>
+                <p><strong>Sobremesa:</strong> Banana</p>
+                <p><strong>Suco:</strong> Abacaxi</p>
+              </div>
+            </div>`,
+          
+            sexta: `<div class="menu-grid">
+              <div class="menu-card">
+                <h3>Café da Manhã</h3>
+                <p><strong>Pão:</strong> Pão Francês (CG)</p>
+                <p><strong>Complemento:</strong> Margarina com Sal</p>
+                <p><strong>Bebidas:</strong> Café, Leite Integral (CL), Suco de Uva</p>
+                <p><strong>Fruta:</strong> Melão</p>
+              </div>
+              <div class="menu-card">
+                <h3>Almoço</h3>
+                <p><strong>Prato Proteico:</strong> Sobrecoxa ao Molho Sugo</p>
+                <p><strong>Opção Vegetariana:</strong> Quibe Vegetariano (CG)</p>
+                <p><strong>Salada:</strong> Alface e Rabanete</p>
+                <p><strong>Acompanhamentos:</strong> Arroz, Feijão e Chuchu Tropeiro</p>
+                <p><strong>Sobremesa:</strong> Melancia</p>
+                <p><strong>Suco:</strong> Goiaba</p>
+              </div>
+              <div class="menu-card">
+                <h3>Jantar</h3>
+                <p><strong>Prato Proteico:</strong> Ensopado de Carne</p>
+                <p><strong>Opção Vegetariana:</strong> Omelete à Marguerita (CL)</p>
+                <p><strong>Salada:</strong> Repolho Bicolor e Tabule (CG)</p>
+                <p><strong>Acompanhamentos:</strong> Arroz, Feijão e Chuchu ao Alho</p>
+                <p><strong>Sobremesa:</strong> Doce de Leite / Melancia</p>
+                <p><strong>Suco:</strong> Acerola</p>
+              </div>
+            </div>`,
+          
+            sabado: `<div class="menu-grid menu-grid-single">
+              <div class="menu-card">
+                <h3>Almoço</h3>
+                <p><strong>Salada:</strong> Repolho com Tomate e Salada de Lentilha</p>
+                <p><strong>Prato Proteico:</strong> Peixe Desfiado</p>
+                <p><strong>Opção Vegetariana:</strong> Grão-de-Bico ao Molho Curry e Banana da Terra</p>
+                <p><strong>Acompanhamentos:</strong> Arroz, Feijão e Batata Rústica com Alecrim</p>
+                <p><strong>Sobremesa:</strong> Pudim de Morango / Maçã</p>
+                <p><strong>Suco:</strong> Abacaxi</p>
+              </div>
+            </div>`
+          };
 
     // --- FUNÇÕES DE RENDERIZAÇÃO E EVENT LISTENERS ---
 
