@@ -82,7 +82,12 @@ nav .logo img {
 
 .about-content { text-align: center; max-width: 700px; margin: 0 auto 3rem auto; }
 .about-members { text-align: center; }
-.members-row { display: flex; justify-content: center; flex-direction: column; align-items: center; gap: 2rem; }
+.members-row {
+    display: grid;
+    grid-template-columns: 1fr; 
+    gap: 2rem;
+    justify-items: center;
+}
 .member-card { width: 150px; }
 .member-card img { width: 120px; height: 120px; border-radius: 50%; object-fit: cover; border: 3px solid var(--primary-color); }
 .member-card h4 { margin-top: 0.5rem; font-size: 1rem; }
@@ -291,6 +296,9 @@ form input:focus, form textarea:focus { outline: none; border-color: var(--prima
     .timeline {
         overflow: auto;
     }
+     .members-row {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
 
 /* --- ESTILOS PARA TELAS MAIORES (TABLET E DESKTOP) --- */
@@ -335,4 +343,7 @@ form input:focus, form textarea:focus { outline: none; border-color: var(--prima
 @media(min-width: 1024px) {
     .container { width: 80%; max-width: 1100px; }
     .curriculum-grid { grid-template-columns: repeat(9, 1fr); min-width: 0; }
+      .members-row {
+        grid-template-columns: repeat(5, 1fr);
+    }
 }
