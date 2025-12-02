@@ -92,7 +92,7 @@ const cardapioData = {
 
   terca: '<div class="menu-grid">\
     <div class="menu-card">\
-      <h3>Desjejum</h3>\
+      <h3>Café da Manhã</h3>\
       <p><strong>Pão:</strong> Pão, Pão de Hot Dog (CG)</p>\
       <p><strong>Complemento:</strong> Manteiga com Sal</p>\
       <p><strong>Bebidas:</strong> Café, Leite Integral (CL), Suco de Uva</p>\
@@ -122,7 +122,7 @@ const cardapioData = {
 
   quarta: '<div class="menu-grid">\
     <div class="menu-card">\
-      <h3>Desjejum</h3>\
+      <h3>Café da Manhã</h3>\
       <p><strong>Pão:</strong> Pão, Pão Francês (CG)</p>\
       <p><strong>Complemento:</strong> Margarina com Sal</p>\
       <p><strong>Bebidas:</strong> Café, Leite Integral (CL), Suco de Abacaxi</p>\
@@ -152,7 +152,7 @@ const cardapioData = {
 
   quinta: '<div class="menu-grid">\
     <div class="menu-card">\
-      <h3>Desjejum</h3>\
+      <h3>Café da Manhã</h3>\
       <p><strong>Pão:</strong> Pão, Pão de Hot Dog (CG)</p>\
       <p><strong>Complemento:</strong> Manteiga com Sal</p>\
       <p><strong>Bebidas:</strong> Café, Leite Integral (CL), Suco de Uva</p>\
@@ -182,7 +182,7 @@ const cardapioData = {
 
   sexta: '<div class="menu-grid">\
     <div class="menu-card">\
-      <h3>Desjejum</h3>\
+      <h3>Café da Manhã</h3>\
       <p><strong>Pão:</strong> Pão, Pão Francês (CG)</p>\
       <p><strong>Complemento:</strong> Margarina com Sal</p>\
       <p><strong>Bebidas:</strong> Café, Leite Integral (CL), Suco de Manga</p>\
