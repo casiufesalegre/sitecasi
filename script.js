@@ -50,14 +50,127 @@ document.addEventListener('DOMContentLoaded', function() {
         "9º Período": [{ name: "COM11259 – Sistemas de Software Livre", ch: "30T", prereq: "COM10132 - Sistemas Operacionais" },{ name: "COM11261 – Trabalho de Conclusão de Curso em SI II", ch: "15T / 75L", prereq: "COM11212 - Trabalho de Conclusão de Curso em SI I" },{ name: "COM11260 – Estágio em Informática", ch: "30T / 180E", prereq: "5 períodos vencidos" }]
     };
 
-    const scheduleData = {
-        periodo1: `<tbody><tr><td>18:00 às 20:00</td><td><strong>Introdução à Informática</strong><small> Lab 1 - Chiu-Chiu</small></td><td><strong>Vetores e Geometria Analítica</strong><small> Sala 03 - Prédio Ciclo Básico</small></td><td><strong>Lógica Computacional I</strong><small> Sala 03 - Prédio Ciclo Básico</small></td><td><strong>Programação I</strong><small> Lab 1 - Chiu-Chiu</small></td><td><strong>Introdução aos Sistemas de Informação</strong><small> Sala 03 - Prédio Ciclo Básico</small></td></tr><tr><td>20:00 às 22:00</td><td><strong>Lógica Computacional I</strong><small> Sala 03 - Prédio Ciclo Básico</small></td><td><strong>Português Instrumental</strong><small> Lab 1 - Chiu-Chiu</small></td><td><strong>Introdução à Informática</strong><small> Lab 1 - Chiu-Chiu</small></td><td><strong>Vetores e Geometria Analítica</strong><small> Sala 03 - Prédio Ciclo Básico</small></td><td><strong>Programação I</strong><small> Lab 1 - Chiu-Chiu</small></td></tr></tbody>`,
-        periodo3: `<tbody><tr><td>18:00 às 20:00</td><td><strong>Sistemas de Apoio à Decisão</strong><small> Sala 07 - Prédio Central</small></td><td><strong>Estruturas de Dados I</strong><small> Lab 1 - Chiu-Chiu</small></td><td><strong>Engenharia de Software I</strong><small> Sala 07 - Prédio Central</small></td><td><strong>Computabilidade e Complexidade</strong><small> Sala 07 - Prédio Central</small></td><td><strong>Computabilidade e Complexidade</strong><small> Sala 07 - Prédio Central</small></td></tr><tr><td>20:00 às 22:00</td><td><strong>Estruturas de Dados I</strong><small> Lab 1 - Chiu-Chiu</small></td><td><strong>Álgebra Linear</strong><small> Sala 07 - Prédio Central</small></td><td><strong>Sistemas de Apoio à Decisão</strong><small> Sala 07 - Prédio Central</small></td><td><strong>Álgebra Linear</strong><small> Sala 07 - Prédio Central</small></td><td><strong>Engenharia de Software I</strong><small> Sala 07 - Prédio Central</small></td></tr></tbody>`,
-        periodo5: `<tbody><tr><td>18:00 às 20:00</td><td><strong>Otimização Linear</strong><small> Lab 1 - Chiu-Chiu</small></td><td><strong>Otimização Linear</strong><small> Lab 1 - Chiu-Chiu</small></td><td><strong>Banco de Dados</strong><small> Lab 3 - Chiu-Chiu</small></td><td><strong>Projeto de Sistemas de Software</strong><small> Lab 3 - Chiu-Chiu</small></td><td><strong>Interação Humano-Máquina</strong><small> Lab 3 - Chiu-Chiu</small></td></tr><tr><td>20:00 às 22:00</td><td><strong>Sistemas Operacionais</strong><small> Lab 1 - Chiu-Chiu</small></td><td><strong>Sistemas Operacionais</strong><small>Lab 1 - Chiu-Chiu</small></td><td><strong>Interação Humano-Máquina</strong><small> Lab 3 - Chiu-Chiu</small></td><td><strong>Banco de Dados</strong><small> Lab 3 - Chiu-Chiu</small></td><td><strong>Projeto de Sistemas de Software</strong><small> Lab 3 - Chiu-Chiu</small></td></tr></tbody>`,
-        periodo7: `<tbody><tr><td>18:00 às 20:00</td><td><strong>Sistemas Distribuídos</strong><small> Lab. Desenv. SW I - Reuni</small></td><td><strong>Sistemas Distribuídos</strong><small> Lab. Desenv. SW I - Reuni</small></td><td><strong>Segurança e Auditoria de Sistemas</strong><small> Lab. Desenv. SW I - Reuni</small></td><td><strong>Administração e Economia</strong><small> Lab. Desenv. SW I - Reuni</small></td><td><strong>Comércio Eletrônico</strong><small> Lab. Desenv. SW I - Reuni</small></td></tr><tr><td>20:00 às 22:00</td><td><strong>Informática e Sociedade</strong><small> Lab. Desenv. SW I - Reuni</small></td><td></td><td><strong>Comercio Eletrônico</strong><small> Lab. Desenv. SW I - Reuni</small></td><td><strong>Administração e Economia</strong><small> Lab. Desenv. SW I - Reuni</small></td><td><strong>Segurança e Auditoria de Sistemas</strong><small> Lab. Desenv. SW I - Reuni</small></td></tr></tbody>`,
-        periodo9: `<tbody><tr><td>18:00 às 20:00</td><td><strong>Algoritmos Numéricos</strong><small> Sala 04 - Prédio Central</small></td><td><strong>Sistemas de Softwares Livres</strong><small> Lab. Desenv. SW 2 - Reuni</small></td><td><strong>Algoritmos Numéricos</strong><small> Sala 04 - Prédio Central</small></td><td></td><td></td></tr><tr><td>20:00 às 22:00</td><td><strong>Tópicos Especiais em Redes de Computadores I</strong><small> Lab. Desenv. SW 2 - Reuni</small></td><td><strong>Tópicos Especiais em Análise Combinatória</strong><small> Lab. Desenv. SW I - Reuni</small></td><td><strong>Tópicos Especiais em Análise Combinatória</strong><small> Lab. Desenv. SW I - Reuni</small></td><td></td><td></td></tr></tbody>`
-    };
+const scheduleData = {
+    // 1º Período (Reoferta)
+    periodo1: `<tbody>
+        <tr>
+            <td>18:00 às 20:00</td>
+            <td></td>
+            <td></td>
+            <td><strong>Programação I</strong><small> Paulo Roberto</small></td>
+            <td></td>
+            <td><strong>Programação I</strong><small> Paulo Roberto</small></td>
+        </tr>
+        <tr>
+            <td>20:00 às 22:00</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </tbody>`,
 
+    // 2º Período (Oferta Regular)
+    periodo2: `<tbody>
+        <tr>
+            <td>18:00 às 20:00</td>
+            <td><strong>Teoria Geral dos Sistemas</strong><small> Simone Dornelas</small></td>
+            <td><strong>Fund. Programação Web</strong><small> Giuliano/Simone</small></td>
+            <td><strong>Matemática Discreta</strong><small> Edmar Hell</small></td>
+            <td><strong>Fund. Programação Web</strong><small> Giuliano/Simone</small></td>
+            <td><strong>Matemática Discreta</strong><small> Edmar Hell</small></td>
+        </tr>
+        <tr>
+            <td>20:00 às 22:00</td>
+            <td><strong>Cálculo A</strong><small> Daniel Santos</small></td>
+            <td><strong>Teoria Geral dos Sistemas</strong><small> Simone Dornelas</small></td>
+            <td><strong>Cálculo A</strong><small> Daniel Santos</small></td>
+            <td><strong>Inglês Instrumental</strong><small> Alexandre Rosa</small></td>
+            <td><strong>Cálculo A</strong><small> Daniel Santos</small></td>
+        </tr>
+    </tbody>`,
+
+    // 3º Período (Reoferta)
+    periodo3: `<tbody>
+        <tr>
+            <td>18:00 às 20:00</td>
+            <td><strong>Estruturas de Dados I</strong><small> Juliana Pirovani</small></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>20:00 às 22:00</td>
+            <td></td>
+            <td><strong>Estruturas de Dados I</strong><small> Juliana Pirovani</small></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </tbody>`,
+
+    // 4º Período (Oferta Regular)
+    periodo4: `<tbody>
+        <tr>
+            <td>18:00 às 20:00</td>
+            <td><strong>Programação II</strong><small> Bruno Vilela</small></td>
+            <td><strong>Estatística Básica</strong><small> Maristela Bauer</small></td>
+            <td><strong>Eng. Requisitos de Software</strong><small> Bruno Vilela</small></td>
+            <td><strong>Arquitetura de Computadores</strong><small> Valeria Alves</small></td>
+            <td><strong>Estatística Básica</strong><small> Maristela Bauer</small></td>
+        </tr>
+        <tr>
+            <td>20:00 às 22:00</td>
+            <td><strong>Eng. Requisitos de Software</strong><small> Bruno Vilela</small></td>
+            <td><strong>Programação II</strong><small> Bruno Vilela</small></td>
+            <td><strong>Estrutura de Dados II</strong><small> Dayan/Dalvan</small></td>
+            <td><strong>Estrutura de Dados II</strong><small> Dayan/Dalvan</small></td>
+            <td><strong>Arquitetura de Computadores</strong><small> Valeria Alves</small></td>
+        </tr>
+    </tbody>`,
+
+    // 6º Período (Oferta Regular)
+    periodo6: `<tbody>
+        <tr>
+            <td>18:00 às 20:00</td>
+            <td><strong>Ger. Banco de Dados</strong><small> Antonio Almeida</small></td>
+            <td><strong>Redes de Computadores</strong><small> Helder Mendes</small></td>
+            <td><strong>Metodologia de Pesquisa</strong><small> Dayan Bissoli</small></td>
+            <td><strong>Ger. Projetos de Software</strong><small> Marcelo Otone</small></td>
+            <td><strong>Métodos de Otimização</strong><small> Geraldo Regis</small></td>
+        </tr>
+        <tr>
+            <td>20:00 às 22:00</td>
+            <td><strong>Direito e Legislação</strong><small> Larice Nogueira</small></td>
+            <td><strong>Ger. Banco de Dados</strong><small> Antonio Almeida</small></td>
+            <td><strong>Métodos de Otimização</strong><small> Geraldo Regis</small></td>
+            <td><strong>Redes de Computadores</strong><small> Helder Mendes</small></td>
+            <td><strong>Ger. Projetos de Software</strong><small> Marcelo Otone</small></td>
+        </tr>
+    </tbody>`,
+
+    // 8º Período (Oferta Regular)
+    periodo8: `<tbody>
+        <tr>
+            <td>18:00 às 20:00</td>
+            <td><strong>Gestão Qualidade Software</strong><small> Giuliano Prado</small></td>
+            <td></td>
+            <td><strong>Empreendedorismo</strong><small> Wendel Sandro</small></td>
+            <td><strong>Ger. e Adm. de Redes</strong><small> Helder Mendes</small></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>20:00 às 22:00</td>
+            <td><strong>Desenv. Sistemas WEB</strong><small> Giuliano Prado</small></td>
+            <td><strong>Desenv. Sistemas WEB</strong><small> Giuliano Prado</small></td>
+            <td><strong>Ger. e Adm. de Redes</strong><small> Helder Mendes</small></td>
+            <td><strong>Gestão Qualidade Software</strong><small> Giuliano Prado</small></td>
+            <td></td>
+        </tr>
+    </tbody>`
+};
 const cardapioData = {
 
   segunda: `
