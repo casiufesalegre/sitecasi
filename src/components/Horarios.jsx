@@ -3,28 +3,24 @@ import '../styles/Horarios.css';
 
 const scheduleData = {
   periodo1: [
-    { hour: "18:00 às 20:00", days: ["", "", "Programação I (Paulo Roberto)", "", "Programação I (Paulo Roberto)"] },
-    { hour: "20:00 às 22:00", days: ["", "", "", "", ""] }
-  ],
-  periodo2: [
-    { hour: "18:00 às 20:00", days: ["Teoria Geral dos Sistemas (Simone Dornelas)", "Fund. Programação Web (Giuliano/Simone)", "Matemática Discreta (Edmar Hell)", "Fund. Programação Web (Giuliano/Simone)", "Matemática Discreta (Edmar Hell)"] },
-    { hour: "20:00 às 22:00", days: ["Cálculo A (Daniel Santos)", "Teoria Geral dos Sistemas (Simone Dornelas)", "Cálculo A (Daniel Santos)", "Inglês Instrumental (Alexandre Rosa)", "Cálculo A (Daniel Santos)"] }
+    { hour: "18:00 às 20:00", days: ["Introdução aos Sistemas de Informação - Sl 03 - Ciclo Básico", "Vetores e Geometria Analítica - Sl 01 - Eng. Alimentos", "Introdução à Informática Lab 1 e 2 -  ChiChiu", "Vetores e Geometria Analítica - Sl 01 - Eng. Alimentos", "Programação I - Lab 1 e 3 -  ChiChiu" ] },
+    { hour: "20:00 às 22:00", days: ["Introdução à Informática - Lab 1 e 2 -  ChiChiu", "Português Instrumental - Sl 03 - Ciclo Básico", "Programação I - Lab 1 e 3 -  ChiChiu", "Lógica Computacional I - Sl 03 - Ciclo Básico", "Lógica Computacional I - Sl 03 - Ciclo Básico"] }
   ],
   periodo3: [
-    { hour: "18:00 às 20:00", days: ["Estruturas de Dados I (Juliana Pirovani)", "", "", "", ""] },
-    { hour: "20:00 às 22:00", days: ["", "Estruturas de Dados I (Juliana Pirovani)", "", "", ""] }
+    { hour: "18:00 às 20:00", days: ["Sistemas de Apoio à Decisão - Sl 01 - Eng. Alimentos", "Estruturas de Dados I - Lab 1 e 2 -  ChiChiu", "Engenharia de Software - Sl 01 - Eng. Alimentos", "Estruturas de Dados I - Lab 1 e 2 -  ChiChiu", "Computabilidade e Complexidade - Sl 03 - Ciclo Básico"] },
+    { hour: "20:00 às 22:00", days: ["Álgebra Linear - Sl 01 - Eng. Alimentos", "Sistemas de Apoio à Decisão - Sl 01 - Eng. Alimentos", "Computabilidade e Complexidade - Sl 03 - Ciclo Básico", "Álgebra Linear - Sl 01 - Eng. Alimentos", "Engenharia de Software - Sl 01 - Eng. Alimentos"] }
   ],
-  periodo4: [
-    { hour: "18:00 às 20:00", days: ["Programação II (Bruno Vilela)", "Estatística Básica (Maristela Bauer)", "Eng. Requisitos de Software (Bruno Vilela)", "Arquitetura de Computadores (Valeria Alves)", "Estatística Básica (Maristela Bauer)"] },
-    { hour: "20:00 às 22:00", days: ["Eng. Requisitos de Software (Bruno Vilela)", "Programação II (Bruno Vilela)", "Estrutura de Dados II (Dayan/Dalvan)", "Estrutura de Dados II (Dayan/Dalvan)", "Arquitetura de Computadores (Valeria Alves)"] }
+  periodo5: [
+    { hour: "18:00 às 20:00", days: ["Otimização Linear - Lab 3 -  ChiChiu", "Banco de Dados - Sl 03 - Ciclo Básico", "Otimização Linear - Lab 3 -  ChiChiu", "Projeto de Sistemas de Software - Lab 3 -  ChiChiu", "Sistemas Operacionais - Sl 01 - Eng. Alimentos"] },
+    { hour: "20:00 às 22:00", days: ["Banco de Dados - Sl 03 - Ciclo Básico", "Projeto de Sistemas de Software - Lab 3 -  ChiChiu", "Sistemas Operacionais - Sl 01 - Eng. Alimentos", "Interface Humano-Computador - Lab 1 e 2 -  ChiChiu", "Interface Humano-Computador - Lab 1 e 2 -  ChiChiu"] }
   ],
-  periodo6: [
-    { hour: "18:00 às 20:00", days: ["Ger. Banco de Dados (Antonio Almeida)", "Redes de Computadores (Helder Mendes)", "Metodologia de Pesquisa (Dayan Bissoli)", "Ger. Projetos de Software (Marcelo Otone)", "Métodos de Otimização (Geraldo Regis)"] },
-    { hour: "20:00 às 22:00", days: ["Direito e Legislação (Larice Nogueira)", "Ger. Banco de Dados (Antonio Almeida)", "Métodos de Otimização (Geraldo Regis)", "Redes de Computadores (Helder Mendes)", "Ger. Projetos de Software (Marcelo Otone)"] }
+  periodo7: [
+    { hour: "18:00 às 20:00", days: ["Informática e Sociedade - Sl 07 - Prédio Central / Lab 1 - ChiChiu", "Segurança e Auditoria de Sistemas - Lab 2 e 3 -  ChiChiu", "Sistemas Distribuídos - Sl 07 - Prédio Central / Lab 3 - ChiChiu", "Administração e Economia - Sl 07 - Prédio Central", "Segurança e Auditoria de Sistemas - Lab 2 e 3 -  ChiChiu"] },
+    { hour: "20:00 às 22:00", days: ["Comércio Eletrônico - Lab 2 e 3 -  ChiChiu", "Tópicos Esp. Inf. II - Lab I - Reuni", "Comércio Eletrônico - Lab 2 e 3 -  ChiChiu", "Administração e Economia - Sl 07 - Prédio Central", "Sistemas Distribuídos - Sl 07 - Prédio Central / Lab 1 - ChiChiu"] }
   ],
-  periodo8: [
-    { hour: "18:00 às 20:00", days: ["Gestão Qualidade Software (Giuliano Prado)", "", "Empreendedorismo (Wendel Sandro)", "Ger. e Adm. de Redes (Helder Mendes)", ""] },
-    { hour: "20:00 às 22:00", days: ["Desenv. Sistemas WEB (Giuliano Prado)", "Desenv. Sistemas WEB (Giuliano Prado)", "Ger. e Adm. de Redes (Helder Mendes)", "Gestão Qualidade Software (Giuliano Prado)", ""] }
+  periodo9: [
+    { hour: "18:00 às 20:00", days: ["Algoritmos Numéricos - Sl 11 - Prédio Central", "Sistemas de Software Live - Lab I - Reuni", "Algoritmos Numéricos - Sl 11 - Prédio Central", "Tópicos Esp. Inf. II - Lab 2 - Reuni", ""] },
+    { hour: "20:00 às 22:00", days: ["", "", "Tópicos Esp. Inf. II - Lab 2 - Reuni", "", ""] }
   ]
 };
 
@@ -38,7 +34,7 @@ export default function Horarios() {
         <p className="section-subtitle">Selecione o período acadêmico para mapear as grades horárias das disciplinas.</p>
         
         <div className="tabs">
-          {["periodo1", "periodo2", "periodo3", "periodo4", "periodo6", "periodo8"].map((p) => (
+          {["periodo1", "periodo3", "periodo5", "periodo7", "periodo9"].map((p) => (
             <button 
               key={p}
               className={`tab-button ${activeTab === p ? 'active' : ''}`}
